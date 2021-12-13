@@ -1,47 +1,36 @@
 <template>
-  <div class="app">
-    <Header />
-    <div class="container">
-      <Sidebar />
-      <ChatDashboard />
-    </div>
+  <div id="app">
+    
+    <SignupForm msg="Sign Up Form"/>
+   
   </div>
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import Sidebar from "./components/Sidebar.vue";
-import ChatDashboard from "./components/ChatDashboard.vue";
+import SignupForm from './views/SignupForm.vue'
+
+
 
 export default {
-  name: "App",
-  components: { Header, Sidebar, ChatDashboard },
-};
+  name: 'App',
+  components: {
+    SignupForm, 
+  }
+}
 </script>
 
 <style>
-html {
-  font-size: 62.5%;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 body {
-  font-family: "Roboto", sans-serif;
-  background: linear-gradient(to right, #ffafbd, #ffc3a0);
-  height: 100vh;
-}
-.app {
-  width: 90%;
-  margin: 10rem auto;
-  background-color: green;
-  height: 70rem;
-  color: white;
-}
-.container {
-  display: flex;
-  height: calc(100% - 5rem);
+  margin: 0;
+  background: #eee;
 }
 </style>
